@@ -19,4 +19,8 @@ export class TaskListItemComponent implements OnInit {
   remove(task: Task) {
     this.taskService.delete(task.id);
   }
+
+  onCompletedCheckChange(task: Task) {
+    this.taskService.save(task);
+  }
 }

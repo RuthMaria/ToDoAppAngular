@@ -1,5 +1,10 @@
 <div class="form-group form-check">
-  <input type="checkbox" class="form-check-input" />
+  <input
+    type="checkbox"
+    class="form-check-input"
+    [(ngModel)]="task.completed"
+    (change)="onCompletedCheckChange(task)"
+  />
 </div>
 
 <!-- [innerHTML] é equivalente ao {{task.description}} dentro da tag div, a diferença é que o [innerHTML] é usado quando o texto a ser exibido tem quebra de linha -->
