@@ -1,3 +1,4 @@
+import { TaskService } from './../shared/task.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Task } from '../shared/task';
 
@@ -11,5 +12,11 @@ export class TaskListItemComponent implements OnInit {
   @Input()
   task!: Task;
 
-  ngOnInit(): void {}
+  constructor(private taskService: TaskService) {}
+
+  ngOnInit() {}
+
+  remove(task: Task) {
+    this.taskService.delete(task.id);
+  }
 }
