@@ -7,14 +7,12 @@ import { Task } from '../shared/task';
   templateUrl: './task-list-item.component.html',
   styleUrls: ['./task-list-item.component.css'],
 })
-export class TaskListItemComponent implements OnInit {
-  /* input é um atributo do componente*/
+export class TaskListItemComponent {
+  /* input é um atributo do componente, semelhante a passar uma prop no react*/
   @Input()
   task!: Task;
 
   constructor(private taskService: TaskService) {}
-
-  ngOnInit() {}
 
   remove(task: Task) {
     this.taskService.delete(task.id);

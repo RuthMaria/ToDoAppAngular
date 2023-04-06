@@ -1,12 +1,11 @@
 <h2>Tarefas</h2>
 <hr />
 
-<!-- routerLink faz a mesma coisa que o onClick-->
+<!-- routerLink faz a mesma coisa que o onClick, redireciona para a rota definida -->
 <button type="button" class="btn btn-primary mb-2" [routerLink]="['/new']">
   Nova tarefa
 </button>
 
-<!--ngFor se comporta igual ao map, ele tá lendo o array tasks que está no aruqivo task-list-->
 <section>
   <div *ngIf="tasks.length === 0" class="alert alert-warning" role="alert">
     Nenhuma tarefa foi cadastrada ainda.
@@ -14,6 +13,7 @@
 
   <!-- não pode usar duas diretivas na mesma tag (ngIf e ngFor, por exemplo)-->
   <ul class="list-group" *ngIf="tasks.length > 0">
+    <!--ngFor se comporta igual ao map, ele tá lendo o array tasks que está no arquivo task-list-->
     <li class="list-group-item" *ngFor="let task of tasks">
       <app-task-list-item [task]="task" class="task-item"></app-task-list-item>
     </li>

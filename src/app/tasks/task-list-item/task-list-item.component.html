@@ -1,4 +1,5 @@
 <div class="form-group form-check">
+  <!-- ngModel é equivalente ao useState, o valor marcado no checkbox será atualizado em tempo real -->
   <input
     type="checkbox"
     class="form-check-input"
@@ -7,10 +8,15 @@
   />
 </div>
 
-<!-- [innerHTML] é equivalente ao {{task.description}} dentro da tag div, a diferença é que o [innerHTML] é usado quando o texto a ser exibido tem quebra de linha -->
+<!--
+  [innerHTML] é equivalente ao {{task.description}} dentro da tag div,
+  a diferença é que o [innerHTML] é usado quando o texto a ser exibido tem quebras de linhas
+
+  [ngClass] adiciona uma classe dinamicamente
+-->
 <div
   [innerHTML]="task.description"
-  class="task-item-description"
+  class="task-item-description mb-1"
   [ngClass]="task.completed ? 'task-completed' : ''"
 ></div>
 

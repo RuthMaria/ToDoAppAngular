@@ -19,17 +19,14 @@ export class TaskFormComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    const id =
-      this.activatedRoute.snapshot.paramMap.get(
-        'id'
-      ); /* Pega o parâmetro da rota */
+    const id = this.activatedRoute.snapshot.paramMap.get('id'); // Pega o parâmetro da rota
 
     if (id) {
       const foundTask = this.taskService.getById(parseInt(id));
 
       if (foundTask) {
         this.task = foundTask;
-        this.title = 'Alterando tarefa';
+        this.title = 'Alterar tarefa';
       }
     }
   }
