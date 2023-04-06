@@ -40,11 +40,12 @@ To-do list style task control application, which contains the following function
 
 ## ⚒️ Technologies Used
 
+- CSS3
+- HTML5
 - Angular
+- Bootstrap
 - TypeScript
 - LocalStorage
-- HTML5
-- CSS3
 
 <a id="run"></a><br>
 
